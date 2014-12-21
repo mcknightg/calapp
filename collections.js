@@ -1,2 +1,2 @@
 // Create a new MongoDB collection for calendar events
-CalEvents = new Meteor.Collection('calevents');
+CalEvents = new Mongo.Collection('calevents');
