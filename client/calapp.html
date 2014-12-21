@@ -1,0 +1,52 @@
+<body>
+	{{>calendar}}
+	</body>
+<template name="calendar">
+    
+	{{#if showEditEvent}}
+	{{>editEvent}}
+	{{/if}}
+	
+	<!--Sees to it, that everytime something is entered the calendar gets re rendered automatically-->
+	
+	<div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-8">
+					<div id="calendar">
+						
+					</div>
+                </div>
+                <div class="col-md-2">
+                </div>
+            </div>
+    </div>
+		
+</template>
+
+<template name="editEvent">
+<!--Modal Dialog-->
+	<div class="modal" id="EditEventModal">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+			<h4 class="modal-title">Agenda Item</h4>
+		  </div>
+		  <div class="modal-body">
+			<label for="title">Item: </label><input type="text" class="title" name="title" value="{{evt.title}}" id="title">
+		  </div>
+		  <div class="modal-footer">
+			<a href="#" class="btn btn-danger remove">Delete</a>
+			<a href="#" class="btn btn-primary save">Save</a>
+			<a href="#" class="btn close" data-dismiss="modal">Cancel</a>
+		  </div>
+		</div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+
+</template>
+
+
